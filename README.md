@@ -3,44 +3,43 @@
 📖 Visão Geral
 Este projeto é um **sistema de gerenciamento de biblioteca em console**, desenvolvido em Python. Ele permite cadastrar livros, atualizar status de leitura, filtrar por gênero, buscar e manter um histórico de livros concluídos.  
 
-Ele demonstra o uso de **estruturas de dados fundamentais**:
-- **Lista** → Armazena todos os livros cadastrados.  
-- **Fila (FIFO)** → Gerencia livros pendentes para leitura.  
-- **Pilha (LIFO)** → Mantém o histórico de livros concluídos na ordem inversa de finalização.  
-
 ⚙️ Funcionalidades
 - Cadastrar livro com título, autor, ano, gênero e prioridade.  
-- Listar livros com detalhes.  
+- Listar livros com detalhes.
+- Buscar livros. 
 - Atualizar status (A Ler, Lendo, Concluído).  
-- Ver histórico de livros concluídos (pilha).  
+- Contar por status. 
 - Filtrar por gênero.  
-- Contar por status.  
+- Ver histórico de livros concluídos (pilha). 
 - Deletar livro.  
-- Buscar livro.  
 
-🧩 Exemplo: FIFO, LIFO e Listas
-# Lista: armazena todos os livros
-livros = []
+🧩 Exemplo: FIFO, LIFO, Listas, Dicionário e Tuplas
 
-# Fila (FIFO): livros a serem lidos
-fila_a_ler = []
-
-# Pilha (LIFO): livros concluídos
-pilha_concluidos = []
-
-# Adicionando um livro ao sistema
-livros.append(dict_livro)          # Lista
-fila_a_ler.append(dict_livro)      # Fila (FIFO)
-
-# Concluindo um livro
-pilha_concluidos.append(dict_livro)  # Pilha (LIFO)
-
-# Comportamento FIFO: primeiro livro cadastrado é o primeiro a ser lido
+Comportamento FIFO: Primeiro livro cadastrado é o primeiro a ser lido
 primeiro_a_ler = fila_a_ler[0]
 
-# Comportamento LIFO: último livro concluído é exibido primeiro
+Comportamento LIFO: Último livro concluído é exibido primeiro
 ultimo_concluido = pilha_concluidos[-1]
 
+Comportamento Dicionário: Estrutura de dados mutável que armazena informações     
+    dict_livro = {
+        "id": contador_id,
+        "titulo": titulo_livro,
+        "autor": autor,
+        "ano": ano,
+        "genero": genero,
+        "prioridade": prioridade,
+        "status": status[0]
+    }
+
+Comportamento Lista: Uma coleção ordenada e mutável de elementos que permite duplicatas e manipulação dinâmica de itens.
+livros = []   lista global de livros que armazena os objetos
+
+Comportamento Tupla: Uma coleção ordenada e imutável, cujos valores não podem ser alterados ou modificados após a sua criação.
+prioridades = ("Baixa", "Média", "Alta")  # tupla de prioridades valores imutaveis
+status = ("A Ler", "Lendo", "Concluído")  # tupla de status valores imutaveis
+
+  
 🚀 Instalação
 1. Clone o repositório:
    ```bash
@@ -62,13 +61,13 @@ ultimo_concluido = pilha_concluidos[-1]
 🛠️ Uso
 Ao iniciar, o programa exibe um menu com opções:
 - `1` → Cadastrar livro  
-- `2` → Listar livros  
-- `3` → Atualizar status  
-- `4` → Ver histórico de concluídos  
-- `5` → Filtrar por gênero  
-- `6` → Contar por status  
-- `7` → Deletar livro  
-- `8` → Buscar livro  
+- `2` → Listar Livros  
+- `3` → Buscar Livros  
+- `4` → Atualizar Status  
+- `5` → Contar por Status  
+- `6` → Filtrar por Gênero 
+- `7` → Histórico de Concluídos  
+- `8` → Deletar  
 - `9` → Sair  
 
 🤝 Contribuição
