@@ -69,8 +69,7 @@ def buscar_livro():
 
     encontrados = [
         livro for livro in livros
-        if termo in livro["titulo"].lower() or termo in livro["autor"].lower()
-    ]
+        if termo in livro["titulo"].lower() or termo in livro["autor"].lower() ]
 
     if len(encontrados) == 0:
         print("Nenhum livro encontrado com esse termo.\n")
