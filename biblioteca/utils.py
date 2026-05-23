@@ -1,3 +1,6 @@
+# Arquivo que recebe a parte de interface
+# O validar_interiro serve para não ter ids duplicados
+
 def linha():
     print("=" * 40)
 
