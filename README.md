@@ -16,12 +16,15 @@ Este projeto é um **sistema de gerenciamento de biblioteca em console**, desenv
 🧩 Exemplo: FIFO, LIFO, Listas, Dicionário e Tuplas
 
 Comportamento FIFO: Primeiro livro cadastrado é o primeiro a ser lido
+
 primeiro_a_ler = fila_a_ler[0]
 
 Comportamento LIFO: Último livro concluído é exibido primeiro
+
 ultimo_concluido = pilha_concluidos[-1]
 
-Comportamento Dicionário: Estrutura de dados mutável que armazena informações     
+Comportamento Dicionário: Estrutura de dados mutável que armazena informações   
+
     dict_livro = {
         "id": contador_id,
         "titulo": titulo_livro,
@@ -33,9 +36,11 @@ Comportamento Dicionário: Estrutura de dados mutável que armazena informaçõe
     }
 
 Comportamento Lista: Uma coleção ordenada e mutável de elementos que permite duplicatas e manipulação dinâmica de itens.
+
 livros = []   lista global de livros que armazena os objetos
 
 Comportamento Tupla: Uma coleção ordenada e imutável, cujos valores não podem ser alterados ou modificados após a sua criação.
+
 prioridades = ("Baixa", "Média", "Alta")  # tupla de prioridades valores imutaveis
 status = ("A Ler", "Lendo", "Concluído")  # tupla de status valores imutaveis
 
