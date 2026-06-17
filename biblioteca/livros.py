@@ -131,10 +131,10 @@ def contar_por_status():
     total_lendo = sum(1 for livro in livros if livro["status"] == status[1])
     total_concluido = sum(1 for livro in livros if livro["status"] == status[2])
 
-    print(f"A Ler: {total_a_ler}")
-    print(f"Lendo: {total_lendo}")
-    print(f"Concluídos: {total_concluido}")
-    print(f"Total geral: {len(livros)}\n")
+    print(f"📗 A Ler: {total_a_ler}")
+    print(f"📖 Lendo: {total_lendo}")
+    print(f"📘 Concluídos: {total_concluido}")
+    print(f"📚 Total geral: {len(livros)}\n")
 
 # 6- Filtrar por Gênero
 def filtrar_por_genero():
