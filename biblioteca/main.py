@@ -8,7 +8,7 @@ from livros import (
 )
 
 def mostrar_menu():
-    titulo("🏛️ Devan's library 📚")
+    titulo("🏛️ Devan's Library 📚")
     print("1. Cadastrar Livro")
     print("2. Listar Livros")
     print("3. Buscar Livro")
