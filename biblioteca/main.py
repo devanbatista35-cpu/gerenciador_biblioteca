@@ -8,7 +8,7 @@ from livros import (
 )
 
 def mostrar_menu():
-    titulo("Biblioteca")
+    titulo("🏛️ Devan's library 📚")
     print("1. Cadastrar Livro")
     print("2. Listar Livros")
     print("3. Buscar Livro")
@@ -40,7 +40,7 @@ while True:
     elif opcao == "8":
         deletar_livro()
     elif opcao == "9":
-        print("Saindo do programa...\n")
+        print("Encerrando o programa...👋\n")
         break
     else:
         print("Opção inválida. Tente novamente.\n")
