@@ -38,13 +38,13 @@ def cadastrar_livro():
 
     livros.append(dict_livro)
     fila_a_ler.append(dict_livro)
-    print("Livro cadastrado com sucesso!\n")
+    print("Livro cadastrado com sucesso!✅\n")
 
 # 2- Listar Livros
 def listar_livros():
     titulo("Listar Livros")
     if len(livros) == 0:
-        print("Nenhum livro cadastrado.\n")
+        print("❌ Nenhum livro cadastrado.\n")
         return
 
     for i, livro in enumerate(livros, start=1):
@@ -62,7 +62,7 @@ def buscar_livro():
     titulo("Buscar Livro")
 
     if len(livros) == 0:
-        print("Nenhum livro cadastrado. A busca não foi realizada.\n")
+        print("❌ Nenhum livro cadastrado. A busca não foi realizada.\n")
         return
 
     termo = validar_texto("Digite parte do título ou autor: ", "Busca").lower()
@@ -72,7 +72,7 @@ def buscar_livro():
         if termo in livro["titulo"].lower() or termo in livro["autor"].lower() ]
 
     if len(encontrados) == 0:
-        print("Nenhum livro encontrado com esse termo.\n")
+        print("❌ Nenhum livro encontrado com esse termo.\n")
         return
 
     for i, livro in enumerate(encontrados, start=1):
@@ -119,9 +119,9 @@ def atualizar_status():
                 if livro in fila_a_ler:
                     fila_a_ler.remove(livro)
 
-            print("Status atualizado com sucesso!\n")
+            print("Status atualizado com sucesso!✅\n")
             return
-    print("Livro não encontrado.\n")
+    print("❌ Livro não encontrado.\n")
 
 
 # 5- Contar por Status
@@ -143,7 +143,7 @@ def filtrar_por_genero():
     encontrados = [livro for livro in livros if livro["genero"].lower() == genero.lower()]
 
     if len(encontrados) == 0:
-        print("Nenhum livro encontrado para esse gênero.\n")
+        print("❌ Nenhum livro encontrado para esse gênero.\n")
         return
 
     for i, livro in enumerate(encontrados, start=1):
@@ -160,7 +160,7 @@ def filtrar_por_genero():
 def ver_historico_concluidos():
     titulo("Histórico de Livros Concluídos")
     if len(pilha_concluidos) == 0:
-        print("Nenhum livro concluído.\n")
+        print("❌ Nenhum livro concluído.\n")
         return
 
     for i, livro in enumerate(reversed(pilha_concluidos), start=1):
@@ -191,7 +191,7 @@ def deletar_livro():
                 fila_a_ler.remove(livro)
             if livro in pilha_concluidos:
                 pilha_concluidos.remove(livro)
-            print("Livro deletado com sucesso!\n")
+            print("Livro deletado com sucesso!✅\n")
             return
-    print("Livro não encontrado.\n")
+    print("❌ Livro não encontrado.\n")
 
