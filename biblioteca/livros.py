@@ -7,7 +7,7 @@ from validacoes import validar_texto, validar_ano
 # 1- Cadastrar Livro
 def cadastrar_livro():
     global contador_id
-    titulo("Cadastrar Livro")
+    titulo("Cadastrar Livro 📙")
     
     titulo_livro = validar_texto("Título: ", "Título")
     autor = validar_texto("Autor: ", "Autor")
@@ -42,7 +42,7 @@ def cadastrar_livro():
 
 # 2- Listar Livros
 def listar_livros():
-    titulo("Listar Livros")
+    titulo(" Listar Livros 📚")
     if len(livros) == 0:
         print("❌ Nenhum livro cadastrado.\n")
         return
@@ -59,7 +59,7 @@ def listar_livros():
 
 # 3- Buscar Livro
 def buscar_livro():
-    titulo("Buscar Livro")
+    titulo(" Buscar Livro 🔍")
 
     if len(livros) == 0:
         print("❌ Nenhum livro cadastrado. A busca não foi realizada.\n")
@@ -87,7 +87,7 @@ def buscar_livro():
 
 # 4- Atualizar Status
 def atualizar_status():
-    titulo("Atualizar Status")
+    titulo(" Atualizar Status 📔")
     listar_livros()
 
     if len(livros) == 0:
@@ -126,7 +126,7 @@ def atualizar_status():
 
 # 5- Contar por Status
 def contar_por_status():
-    titulo("Contagem de Livros por Status")
+    titulo(" Contagem de Livros por Status 📔")
     total_a_ler = sum(1 for livro in livros if livro["status"] == status[0])
     total_lendo = sum(1 for livro in livros if livro["status"] == status[1])
     total_concluido = sum(1 for livro in livros if livro["status"] == status[2])
@@ -138,7 +138,7 @@ def contar_por_status():
 
 # 6- Filtrar por Gênero
 def filtrar_por_genero():
-    titulo("Filtrar por Gênero")
+    titulo(" Filtrar por Gênero 🔎📖")
     genero = validar_texto("Digite o gênero: ", "Gênero")
     encontrados = [livro for livro in livros if livro["genero"].lower() == genero.lower()]
 
@@ -158,7 +158,7 @@ def filtrar_por_genero():
 
 # 7- Ver Histórico de Concluídos
 def ver_historico_concluidos():
-    titulo("Histórico de Livros Concluídos")
+    titulo(" Histórico de Livros Concluídos 📚")
     if len(pilha_concluidos) == 0:
         print("❌ Nenhum livro concluído.\n")
         return
@@ -174,7 +174,7 @@ def ver_historico_concluidos():
 
 # 8- Deletar Livro
 def deletar_livro():
-    titulo("Deletar Livro")
+    titulo(" Deletar Livro 📕")
     listar_livros()
 
     if len(livros) == 0:
