@@ -8,7 +8,9 @@ from livros import (
 )
 
 def mostrar_menu():
-    titulo("🏛️ Devan's Library 📚")
+    titulo("🏛️  Devan's Library 📚")
+    print("Seja bem-vindo(a) ao Devan's Library!\n")
+    print("Escolha uma opção para começar: ")
     print("1. Cadastrar Livro")
     print("2. Listar Livros")
     print("3. Buscar Livro")
@@ -21,7 +23,7 @@ def mostrar_menu():
 
 while True:
     mostrar_menu()
-    opcao = input("Escolha uma opção: ")
+    opcao = input("Escolha uma opção desejada: ")
 
     if opcao == "1":
         cadastrar_livro()
