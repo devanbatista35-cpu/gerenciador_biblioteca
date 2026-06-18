@@ -19,7 +19,7 @@ def mostrar_menu():
     print("6. Filtrar por Gênero")
     print("7. Histórico de Concluídos")
     print("8. Deletar Livro")
-    print("9. Sair\n")
+    print("0. Sair\n")
 
 while True:
     mostrar_menu()
@@ -41,7 +41,7 @@ while True:
         ver_historico_concluidos()
     elif opcao == "8":
         deletar_livro()
-    elif opcao == "9":
+    elif opcao == "0":
         print("Encerrando o programa...👋\n")
         break
     else:
